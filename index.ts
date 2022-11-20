@@ -4,6 +4,7 @@ import cors from "cors";
 import Userrouter from "./routes/user";
 import dbInit from "./dbconfig/dbinit";
 import Salaryrouter from "./routes/salary";
+import GraphRouter from "./routes/graph";
 
 const app: express.Application = express();
 
@@ -16,6 +17,7 @@ app.use(cors());
 
 app.use("/user", Userrouter);
 app.use("/salary", Salaryrouter);
+app.use("/graph", GraphRouter);
 
 app.listen(port, () => {
   console.log(`TypeScript with Express
